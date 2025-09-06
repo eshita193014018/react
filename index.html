@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">Market</span> Analysis</h1>
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="/home">Home</a></li>
+          <li><a href="/result">Result</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="showcase">
+    <div class="container">
+      <h1>Twitter Market Analysis.</h1>
+      <p>Predicts the Sentiment of tweets as Positive, Negative, Neutral to give us an estimation about market situation.</p>
+    </div>
+  </section>
+
+  <section id="pred">
+    <div class="container">
+      <h1>Enter the Topic of Tweets</h1>
+      <form action="/predict" method="POST">
+        <textarea name="Tweet" placeholder="Enter here..." rows="4" cols="50"></textarea>
+        <input type="submit" value="Analyse" class="button">
+      </form>
+    </div>
+  </section>
+
+  <section id="boxes">
+    <div class="container">
+      <div class="box">
+        <img src="{{ url_for('static', filename='python.jpg') }}" alt="Python Logo" height="87">
+        <h2 class="t">Machine Learning Code</h2>
+        <p class="p">For ML code for this project click on the button below.</p>
+        <a href="https://github.com/asjadhossainkhan193014073/Twitter-Market-Analysis-Machine-Learning-Code.git" target="_blank" class="button2">Code</a>
+      </div>
+
+      <div class="box">
+        <img src="{{ url_for('static', filename='dis.png') }}" alt="Description">
+        <h2 class="t">Description</h2>
+        <p class="p">This Web-app is using sentiment analysis and using the positive and negative tweets to tell us whether or not Twitter (X) is a good place for posting an ad in there.</p>
+      </div>
+
+      <div class="box">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="team" alt="Team Logo">
+        <h2 class="t">Project done by</h2>
+        <p class="p">Team of ReactIQ</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Team-ARE, Copyright &copy; 2025</p>
+  </footer>
+</body>
+</html>
